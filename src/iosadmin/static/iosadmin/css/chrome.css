@@ -1,0 +1,377 @@
+/* django-iosadmin layout */
+
+/* ----- Navigation bar ----- */
+
+body.iosadmin #header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: var(--ios-nav-bg);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 0.5px solid var(--ios-separator);
+  color: var(--ios-label);
+  padding: 10px 20px;
+  min-height: 52px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+body.iosadmin #header.ios-scrolled {
+  box-shadow: 0 1px 0 var(--ios-separator);
+}
+
+body.iosadmin #branding {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  overflow: hidden;
+}
+
+body.iosadmin .ios-branding {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+body.iosadmin .ios-app-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 7px;
+  background: linear-gradient(180deg, #5ac8fa 0%, var(--ios-accent) 100%);
+  color: #fff !important;
+  font-weight: 700;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.18);
+  text-decoration: none !important;
+}
+
+body.iosadmin .ios-site-title,
+body.iosadmin #site-name a,
+body.iosadmin #branding h1,
+body.iosadmin #branding h1 a:link,
+body.iosadmin #branding h1 a:visited {
+  color: var(--ios-label) !important;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  text-decoration: none !important;
+}
+
+body.iosadmin #user-tools {
+  color: var(--ios-label-2);
+  font-size: 13px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px 0;
+  margin-left: auto;
+}
+
+body.iosadmin #user-tools a,
+body.iosadmin #user-tools strong,
+body.iosadmin #logout-form button {
+  color: var(--ios-accent) !important;
+  font-weight: 500;
+  background: none;
+  border: 0;
+  padding: 0 6px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+body.iosadmin #logout-form {
+  display: inline;
+}
+
+body.iosadmin .theme-toggle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--ios-fill);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline-start: 8px;
+}
+
+body.iosadmin .theme-toggle svg {
+  height: 16px;
+  width: 16px;
+}
+
+body.iosadmin html[data-theme="light"] .theme-toggle svg,
+body.iosadmin .theme-toggle svg {
+  fill: var(--ios-accent);
+  color: transparent;
+}
+
+/* ----- Breadcrumbs as iOS back / path ----- */
+
+body.iosadmin nav[aria-label="Breadcrumbs"],
+body.iosadmin .breadcrumbs {
+  background: transparent !important;
+  color: var(--ios-label-2);
+  padding: 8px 22px 0;
+  font-size: 13px;
+  border: 0;
+}
+
+body.iosadmin .breadcrumbs a {
+  color: var(--ios-accent) !important;
+}
+
+body.iosadmin .breadcrumbs li::after,
+body.iosadmin .breadcrumbs .separator {
+  color: var(--ios-label-3);
+}
+
+/* ----- Layout ----- */
+
+body.iosadmin #main {
+  align-items: stretch;
+}
+
+body.iosadmin #content-start.content {
+  padding: 0;
+}
+
+body.iosadmin #content {
+  padding: 8px 22px 40px;
+  max-width: 1120px;
+}
+
+body.iosadmin.dashboard #content {
+  max-width: 1280px;
+}
+
+body.iosadmin .titles-and-tools {
+  align-items: flex-end;
+  margin: 8px 0 18px;
+}
+
+body.iosadmin.ios-large-titles #content h1,
+body.iosadmin .titles h1 {
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin: 4px 0 0;
+  color: var(--ios-label);
+  line-height: 1.15;
+}
+
+body.iosadmin .titles h2 {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--ios-label-2);
+  margin: 4px 0 0;
+}
+
+/* ----- Sidebar: Settings-style ----- */
+
+body.iosadmin #toggle-nav-sidebar {
+  background: var(--ios-bg-elevated);
+  border: 0.5px solid var(--ios-separator);
+  color: var(--ios-accent);
+  border-radius: 0 12px 12px 0;
+}
+
+body.iosadmin #nav-sidebar {
+  background: var(--ios-bg);
+  border-right: 0.5px solid var(--ios-separator);
+  padding: 12px 10px 24px;
+}
+
+body.iosadmin #nav-filter {
+  width: 100%;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 10px;
+  background: var(--ios-fill);
+  color: var(--ios-label);
+  padding: 8px 12px;
+  font-size: 15px;
+  margin: 0 0 12px;
+  outline: none;
+}
+
+body.iosadmin #nav-filter::placeholder {
+  color: var(--ios-label-3);
+}
+
+body.iosadmin #nav-filter:focus {
+  box-shadow: 0 0 0 3px var(--ios-accent-soft);
+}
+
+body.iosadmin #nav-sidebar .module {
+  background: var(--ios-bg-elevated);
+  border-radius: var(--ios-radius);
+  overflow: hidden;
+  margin: 0 0 14px;
+  box-shadow: none;
+  border: 0.5px solid var(--ios-separator);
+}
+
+body.iosadmin #nav-sidebar .module caption,
+body.iosadmin #nav-sidebar .module caption a {
+  background: transparent !important;
+  color: var(--ios-label-2) !important;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  padding: 10px 14px 6px;
+}
+
+body.iosadmin #nav-sidebar table {
+  border: 0;
+}
+
+body.iosadmin #nav-sidebar th,
+body.iosadmin #nav-sidebar td {
+  border: 0;
+  border-top: 0.5px solid var(--ios-separator);
+  background: transparent;
+  padding: 10px 12px;
+  font-size: 15px;
+}
+
+body.iosadmin #nav-sidebar tr:first-child th,
+body.iosadmin #nav-sidebar tr:first-child td {
+  border-top: 0;
+}
+
+body.iosadmin #nav-sidebar a {
+  color: var(--ios-label) !important;
+}
+
+body.iosadmin #nav-sidebar .current-model,
+body.iosadmin #nav-sidebar [aria-current="page"] {
+  color: var(--ios-accent) !important;
+  font-weight: 600;
+}
+
+body.iosadmin #nav-sidebar .addlink {
+  color: var(--ios-accent) !important;
+  font-weight: 500;
+}
+
+/* ----- Dashboard grouped lists ----- */
+
+body.iosadmin.dashboard #content-main.app-list,
+body.iosadmin #content-main.app-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 18px;
+}
+
+body.iosadmin #content-main .module,
+body.iosadmin #content-related .module,
+body.iosadmin .module {
+  background: var(--ios-bg-elevated);
+  border-radius: var(--ios-radius-lg);
+  border: 0.5px solid var(--ios-separator);
+  box-shadow: var(--ios-shadow);
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+
+body.iosadmin .module h2,
+body.iosadmin .module caption,
+body.iosadmin .inline-group h2,
+body.iosadmin fieldset.module h2 {
+  background: transparent !important;
+  color: var(--ios-label-2) !important;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  padding: 14px 16px 6px;
+  border: 0;
+}
+
+body.iosadmin #content-main .module table,
+body.iosadmin .module table {
+  border: 0;
+}
+
+body.iosadmin #content-main .module th,
+body.iosadmin #content-main .module td {
+  border: 0;
+  border-top: 0.5px solid var(--ios-separator);
+  padding: 12px 16px;
+  font-size: 16px;
+}
+
+body.iosadmin #content-main .module a {
+  color: var(--ios-label);
+  font-weight: 400;
+}
+
+body.iosadmin #content-main .module .addlink,
+body.iosadmin #content-main .module .changelink,
+body.iosadmin #content-main .module .viewlink {
+  color: var(--ios-accent);
+  font-size: 15px;
+}
+
+body.iosadmin #content-related {
+  margin-top: 8px;
+}
+
+body.iosadmin .actionlist li {
+  padding: 10px 16px;
+  border-top: 0.5px solid var(--ios-separator);
+  font-size: 15px;
+}
+
+body.iosadmin #recent-actions-module h3 {
+  padding: 0 16px;
+  color: var(--ios-label-2);
+}
+
+/* ----- Object tools / buttons ----- */
+
+body.iosadmin .object-tools {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 8px;
+}
+
+body.iosadmin .object-tools li {
+  padding: 0;
+  height: auto;
+}
+
+body.iosadmin .object-tools a,
+body.iosadmin .object-tools a:link,
+body.iosadmin .object-tools a:visited {
+  background: var(--ios-fill);
+  color: var(--ios-accent) !important;
+  border-radius: var(--ios-radius-pill);
+  padding: 7px 14px;
+  font-size: 15px;
+  font-weight: 600;
+  height: auto;
+  line-height: 1.2;
+  text-transform: none;
+  letter-spacing: -0.01em;
+}
+
+body.iosadmin .object-tools a:hover,
+body.iosadmin .object-tools a:focus {
+  background: var(--ios-fill-2);
+}
+
+body.iosadmin .object-tools a.addlink {
+  background: var(--ios-accent);
+  color: #fff !important;
+}
