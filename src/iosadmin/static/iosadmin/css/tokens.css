@@ -1,0 +1,175 @@
+/* django-iosadmin — iOS / Cupertino skin for Django admin */
+
+:root,
+html[data-theme="light"] {
+  --ios-accent: #007aff;
+  --ios-accent-soft: rgba(0, 122, 255, 0.12);
+  --ios-red: #ff3b30;
+  --ios-orange: #ff9500;
+  --ios-yellow: #ffcc00;
+  --ios-green: #34c759;
+  --ios-teal: #5ac8fa;
+  --ios-indigo: #5856d6;
+  --ios-gray: #8e8e93;
+  --ios-gray-2: #aeaeb2;
+  --ios-gray-3: #c7c7cc;
+  --ios-gray-4: #d1d1d6;
+  --ios-gray-5: #e5e5ea;
+  --ios-gray-6: #f2f2f7;
+
+  --ios-bg: #f2f2f7;
+  --ios-bg-elevated: #ffffff;
+  --ios-bg-grouped: #f2f2f7;
+  --ios-fill: rgba(120, 120, 128, 0.16);
+  --ios-fill-2: rgba(120, 120, 128, 0.12);
+  --ios-separator: rgba(60, 60, 67, 0.18);
+  --ios-opaque-separator: #c6c6c8;
+  --ios-label: #000000;
+  --ios-label-2: rgba(60, 60, 67, 0.6);
+  --ios-label-3: rgba(60, 60, 67, 0.3);
+  --ios-nav-bg: rgba(249, 249, 249, 0.78);
+  --ios-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+  --ios-radius: 12px;
+  --ios-radius-lg: 16px;
+  --ios-radius-pill: 980px;
+
+  --primary: var(--ios-accent);
+  --secondary: #1c1c1e;
+  --accent: var(--ios-yellow);
+  --primary-fg: #ffffff;
+
+  --body-fg: var(--ios-label);
+  --body-bg: var(--ios-bg);
+  --body-quiet-color: var(--ios-label-2);
+  --body-medium-color: #3c3c43;
+  --body-loud-color: #000;
+
+  --header-color: var(--ios-label);
+  --header-branding-color: var(--ios-label);
+  --header-bg: transparent;
+  --header-link-color: var(--ios-accent);
+
+  --breadcrumbs-fg: var(--ios-label-2);
+  --breadcrumbs-link-fg: var(--ios-accent);
+  --breadcrumbs-bg: transparent;
+
+  --link-fg: var(--ios-accent);
+  --link-hover-color: #0066d6;
+  --link-selected-fg: var(--ios-accent);
+
+  --hairline-color: var(--ios-separator);
+  --border-color: var(--ios-separator);
+
+  --error-fg: var(--ios-red);
+
+  --message-success-bg: rgba(52, 199, 89, 0.16);
+  --message-warning-bg: rgba(255, 149, 0, 0.18);
+  --message-error-bg: rgba(255, 59, 48, 0.16);
+  --message-info-bg: rgba(0, 122, 255, 0.14);
+
+  --darkened-bg: var(--ios-bg-elevated);
+  --selected-bg: var(--ios-accent-soft);
+  --selected-row: var(--ios-accent-soft);
+
+  --button-fg: #fff;
+  --button-bg: var(--ios-fill);
+  --button-hover-bg: var(--ios-fill-2);
+  --default-button-bg: var(--ios-accent);
+  --default-button-hover-bg: #0066d6;
+  --close-button-bg: var(--ios-fill);
+  --close-button-hover-bg: var(--ios-gray-4);
+  --delete-button-bg: var(--ios-red);
+  --delete-button-hover-bg: #e0342b;
+
+  --object-tools-fg: var(--ios-accent);
+  --object-tools-bg: var(--ios-fill);
+  --object-tools-hover-bg: var(--ios-fill-2);
+
+  --font-family-primary:
+    -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display",
+    "Segoe UI", system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji";
+
+  color-scheme: light;
+}
+
+html[data-theme="dark"] {
+  --ios-accent: #0a84ff;
+  --ios-accent-soft: rgba(10, 132, 255, 0.22);
+  --ios-red: #ff453a;
+  --ios-orange: #ff9f0a;
+  --ios-yellow: #ffd60a;
+  --ios-green: #30d158;
+  --ios-teal: #64d2ff;
+  --ios-indigo: #5e5ce6;
+  --ios-gray: #8e8e93;
+  --ios-gray-2: #636366;
+  --ios-gray-3: #48484a;
+  --ios-gray-4: #3a3a3c;
+  --ios-gray-5: #2c2c2e;
+  --ios-gray-6: #1c1c1e;
+
+  --ios-bg: #000000;
+  --ios-bg-elevated: #1c1c1e;
+  --ios-bg-grouped: #000000;
+  --ios-fill: rgba(120, 120, 128, 0.32);
+  --ios-fill-2: rgba(120, 120, 128, 0.24);
+  --ios-separator: rgba(84, 84, 88, 0.65);
+  --ios-opaque-separator: #38383a;
+  --ios-label: #ffffff;
+  --ios-label-2: rgba(235, 235, 245, 0.6);
+  --ios-label-3: rgba(235, 235, 245, 0.3);
+  --ios-nav-bg: rgba(28, 28, 30, 0.78);
+  --ios-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+
+  --primary: var(--ios-accent);
+  --secondary: #1c1c1e;
+  --primary-fg: #fff;
+  --body-fg: var(--ios-label);
+  --body-bg: var(--ios-bg);
+  --body-quiet-color: var(--ios-label-2);
+  --body-medium-color: rgba(235, 235, 245, 0.8);
+  --body-loud-color: #fff;
+  --header-color: var(--ios-label);
+  --header-branding-color: var(--ios-label);
+  --header-link-color: var(--ios-accent);
+  --breadcrumbs-fg: var(--ios-label-2);
+  --breadcrumbs-link-fg: var(--ios-accent);
+  --link-fg: var(--ios-accent);
+  --link-hover-color: #409cff;
+  --hairline-color: var(--ios-separator);
+  --border-color: var(--ios-separator);
+  --error-fg: var(--ios-red);
+  --darkened-bg: var(--ios-bg-elevated);
+  --selected-bg: var(--ios-accent-soft);
+  --selected-row: var(--ios-accent-soft);
+  --default-button-bg: var(--ios-accent);
+  --default-button-hover-bg: #409cff;
+  --delete-button-bg: var(--ios-red);
+  color-scheme: dark;
+}
+
+html,
+body {
+  background: var(--ios-bg);
+}
+
+body.iosadmin {
+  font-size: 17px;
+  letter-spacing: -0.022em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body.iosadmin a:not([role="button"], #header a, #nav-sidebar a, #content-main.app-list a, .object-tools a) {
+  text-decoration: none;
+}
+
+body.iosadmin a:hover {
+  text-decoration: none;
+  opacity: 0.85;
+}
+
+#container {
+  min-height: 100%;
+}
