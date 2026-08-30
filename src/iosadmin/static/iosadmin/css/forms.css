@@ -1,0 +1,426 @@
+/* django-iosadmin lists + forms */
+
+/* ----- Changelist ----- */
+
+body.iosadmin #changelist {
+  background: transparent;
+  display: block;
+}
+
+body.iosadmin #changelist .results,
+body.iosadmin #changelist table {
+  background: var(--ios-bg-elevated);
+  border-radius: var(--ios-radius-lg);
+  overflow: hidden;
+  border: 0.5px solid var(--ios-separator);
+}
+
+body.iosadmin #changelist table thead th {
+  background: var(--ios-bg-elevated);
+  color: var(--ios-label-2);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  border-bottom: 0.5px solid var(--ios-separator);
+  padding: 10px 12px;
+}
+
+body.iosadmin #changelist table tbody td,
+body.iosadmin #changelist table tbody th {
+  border-color: var(--ios-separator);
+  padding: 11px 12px;
+  font-size: 15px;
+}
+
+body.iosadmin #changelist tbody tr:hover {
+  background: var(--ios-fill-2);
+}
+
+body.iosadmin #changelist-filter {
+  background: var(--ios-bg-elevated);
+  border-radius: var(--ios-radius-lg);
+  border: 0.5px solid var(--ios-separator);
+  padding: 8px 0 12px;
+}
+
+body.iosadmin #changelist-filter h2 {
+  background: transparent;
+  color: var(--ios-label);
+  font-size: 17px;
+  font-weight: 600;
+  text-transform: none;
+  padding: 12px 16px 4px;
+}
+
+body.iosadmin #changelist-filter h3 {
+  color: var(--ios-label-2);
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 12px 16px 4px;
+}
+
+body.iosadmin #changelist-filter li {
+  padding: 0;
+}
+
+body.iosadmin #changelist-filter li a {
+  display: block;
+  padding: 8px 16px;
+  color: var(--ios-label);
+  font-size: 15px;
+}
+
+body.iosadmin #changelist-filter li.selected a {
+  color: var(--ios-accent);
+  font-weight: 600;
+  background: var(--ios-accent-soft);
+}
+
+body.iosadmin #changelist-search {
+  margin-bottom: 12px;
+}
+
+body.iosadmin #changelist-search input[type="text"],
+body.iosadmin #searchbar {
+  border: 0;
+  border-radius: 10px;
+  background: var(--ios-fill);
+  padding: 8px 12px;
+  font-size: 16px;
+  min-height: 36px;
+}
+
+body.iosadmin #toolbar {
+  background: transparent;
+  border: 0;
+  padding: 0 0 12px;
+  margin: 0;
+}
+
+body.iosadmin .paginator {
+  background: transparent;
+  border: 0;
+  color: var(--ios-label-2);
+  font-size: 14px;
+  padding: 14px 4px;
+}
+
+body.iosadmin .paginator a,
+body.iosadmin .paginator .this-page {
+  border-radius: 8px;
+  min-width: 32px;
+  display: inline-block;
+  text-align: center;
+  padding: 4px 8px;
+}
+
+body.iosadmin .paginator .this-page {
+  background: var(--ios-accent);
+  color: #fff;
+}
+
+body.iosadmin .actions {
+  background: transparent;
+  padding: 8px 0 14px;
+  color: var(--ios-label-2);
+}
+
+body.iosadmin .actions select {
+  border-radius: 8px;
+  border: 0.5px solid var(--ios-separator);
+  background: var(--ios-bg-elevated);
+  color: var(--ios-label);
+  padding: 6px 8px;
+}
+
+/* ----- Forms ----- */
+
+body.iosadmin fieldset.module {
+  padding-bottom: 8px;
+}
+
+body.iosadmin .form-row {
+  border-bottom: 0.5px solid var(--ios-separator);
+  padding: 10px 16px;
+  background: transparent;
+}
+
+body.iosadmin .form-row:last-child {
+  border-bottom: 0;
+}
+
+body.iosadmin label,
+body.iosadmin .aligned label {
+  color: var(--ios-label);
+  font-size: 15px;
+  font-weight: 400;
+}
+
+body.iosadmin input[type="text"],
+body.iosadmin input[type="password"],
+body.iosadmin input[type="email"],
+body.iosadmin input[type="url"],
+body.iosadmin input[type="number"],
+body.iosadmin input[type="tel"],
+body.iosadmin textarea,
+body.iosadmin select,
+body.iosadmin .vTextField,
+body.iosadmin .vLargeTextField,
+body.iosadmin .vURLField,
+body.iosadmin .vIntegerField {
+  border: 0.5px solid var(--ios-separator);
+  border-radius: 10px;
+  background: var(--ios-fill-2);
+  color: var(--ios-label);
+  padding: 8px 10px;
+  font-size: 16px;
+  box-shadow: none;
+}
+
+body.iosadmin input:focus,
+body.iosadmin textarea:focus,
+body.iosadmin select:focus {
+  outline: none;
+  border-color: var(--ios-accent);
+  box-shadow: 0 0 0 4px var(--ios-accent-soft);
+  background: var(--ios-bg-elevated);
+}
+
+body.iosadmin .help,
+body.iosadmin p.help,
+body.iosadmin div.help {
+  color: var(--ios-label-2);
+  font-size: 13px;
+}
+
+body.iosadmin .errornote,
+body.iosadmin .errorlist {
+  background: rgba(255, 59, 48, 0.12);
+  border: 0;
+  color: var(--ios-red);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+body.iosadmin .messagelist li {
+  border-radius: 12px;
+  border: 0;
+  margin: 0 0 10px;
+  padding: 12px 14px;
+  font-size: 15px;
+}
+
+/* ----- Submit row as iOS toolbar ----- */
+
+body.iosadmin .submit-row {
+  background: var(--ios-nav-bg);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border: 0.5px solid var(--ios-separator);
+  border-radius: var(--ios-radius-lg);
+  padding: 12px 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  position: sticky;
+  bottom: 12px;
+  box-shadow: var(--ios-shadow);
+}
+
+body.iosadmin .submit-row input,
+body.iosadmin .submit-row a,
+body.iosadmin .submit-row a:link,
+body.iosadmin .submit-row a:visited,
+body.iosadmin input[type="submit"] {
+  background: var(--ios-fill);
+  color: var(--ios-accent);
+  border: 0;
+  border-radius: var(--ios-radius-pill);
+  padding: 9px 16px;
+  font-size: 16px;
+  font-weight: 600;
+  height: auto;
+  line-height: 1.2;
+  text-transform: none;
+  letter-spacing: -0.01em;
+}
+
+body.iosadmin .submit-row input.default,
+body.iosadmin .submit-row input[name="_save"],
+body.login .submit-row input {
+  background: var(--ios-accent);
+  color: #fff;
+}
+
+body.iosadmin .submit-row a.deletelink {
+  background: rgba(255, 59, 48, 0.12);
+  color: var(--ios-red) !important;
+  float: none;
+}
+
+body.iosadmin .submit-row a.closelink {
+  background: var(--ios-fill);
+  color: var(--ios-label) !important;
+}
+
+body.iosadmin .submit-row .ios-pressed,
+body.iosadmin .object-tools a.ios-pressed {
+  transform: scale(0.97);
+  opacity: 0.85;
+}
+
+/* ----- Login ----- */
+
+body.login #header {
+  justify-content: center;
+}
+
+body.login #content,
+body.login #content-start {
+  max-width: none;
+  padding: 0;
+}
+
+body.login .ios-login {
+  max-width: 380px;
+  margin: 48px auto 0;
+  text-align: center;
+  padding: 8px 16px 48px;
+}
+
+body.login .ios-login-mark {
+  width: 76px;
+  height: 76px;
+  margin: 0 auto 18px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #5ac8fa 0%, var(--ios-accent) 100%);
+  color: #fff;
+  font-size: 36px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 24px rgba(0, 122, 255, 0.28);
+}
+
+body.login .ios-login-title {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin: 0 0 4px;
+}
+
+body.login .ios-login-subtitle {
+  color: var(--ios-label-2);
+  margin: 0 0 22px;
+  font-size: 15px;
+}
+
+body.login .ios-login-group {
+  background: var(--ios-bg-elevated);
+  border-radius: var(--ios-radius-lg);
+  border: 0.5px solid var(--ios-separator);
+  overflow: hidden;
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+body.login .ios-login-group .form-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 14px;
+  margin: 0;
+}
+
+body.login .ios-login-group label {
+  min-width: 88px;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  color: var(--ios-label);
+}
+
+body.login .ios-login-group input {
+  flex: 1;
+  border: 0;
+  background: transparent;
+  padding: 14px 0;
+  box-shadow: none;
+  width: auto;
+}
+
+body.login .ios-login-group input:focus {
+  box-shadow: none;
+  background: transparent;
+}
+
+body.login .submit-row {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  position: static;
+  justify-content: stretch;
+  padding: 0;
+}
+
+body.login .submit-row input {
+  width: 100%;
+  padding: 12px 16px;
+}
+
+body.login .password-reset-link {
+  margin: 8px 0 16px;
+  font-size: 15px;
+}
+
+/* ----- Delete confirmation ----- */
+
+body.iosadmin.delete-confirmation ul {
+  background: var(--ios-bg-elevated);
+  border-radius: var(--ios-radius);
+  padding: 8px 18px;
+  border: 0.5px solid var(--ios-separator);
+}
+
+/* ----- Widgets / calendar leftovers ----- */
+
+body.iosadmin .calendarbox,
+body.iosadmin .clockbox {
+  border-radius: 14px;
+  border: 0.5px solid var(--ios-separator);
+  overflow: hidden;
+  background: var(--ios-bg-elevated);
+}
+
+/* ----- Responsive ----- */
+
+@media (max-width: 767px) {
+  body.iosadmin #content {
+    padding: 8px 14px 32px;
+  }
+
+  body.iosadmin.ios-large-titles #content h1,
+  body.iosadmin .titles h1 {
+    font-size: 28px;
+  }
+
+  body.iosadmin #user-tools {
+    display: none;
+  }
+
+  body.iosadmin.dashboard #content-main.app-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  body.iosadmin .submit-row input,
+  body.iosadmin .submit-row a,
+  body.iosadmin .object-tools a,
+  body.iosadmin .theme-toggle {
+    transition: transform 0.12s ease, opacity 0.12s ease, background 0.15s ease;
+  }
+}
